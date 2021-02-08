@@ -1,7 +1,97 @@
-<!DOCTYPE html><html><head><title>Java is like Kotlin</title><meta charset="utf-8"><link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/highlightjs-github.css"><script src="js/highlight.9.4.0.js"></script><script>hljs.initHighlightingOnLoad();</script></head><body><a target="_blank" href="https://github.com/kibotu/java-is-like-kotlin"><img id="fork-me" src="http://kibotu.github.io/java-is-like-kotlin/fork-me.png"></a><div id="note">Java is like Kotlin</div><div class="section"><div class="title">BASICS</div><div class="case"><div class="name">Hello World</div><div class="pair"><div class="card"><div class="lang">Java</div><pre class="code"><code>System.out.println("Hello, world!")</code></pre></div><div class="card"><div class="lang">Kotlin</div><pre class="code"><code>println("Hello, world!")
-</code></pre></div></div></div><div class="case"><div class="name">Variables And Constants</div><div class="pair"><div class="card"><div class="lang">Java</div><pre class="code"><code></code></pre></div><div class="card"><div class="lang">Kotlin</div><pre class="code"><code>var myVariable = 42
+<!DOCTYPE html><html><head><title>Java is like Kotlin</title><meta charset="utf-8"><link rel="icon" href="http://logo.cirru.org/cirru-32x32.png" type="image/png"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/styles/github.min.css"><style>body {
+    font-family: "Helvetica Neue", sans-serif;
+    margin: 0;
+}
+
+body * {
+    box-sizing: border-box;
+}
+
+.section {
+    background-color: #f4f4f4;
+    padding: 4em 3em;
+}
+
+.section:nth-child(2n) {
+    background-color: white;
+}
+
+.title {
+    font-size: 2.7em;
+    color: #888;
+    font-weight: 100;
+    letter-spacing: 0.2em;
+    text-align: center;
+}
+
+.case {}
+
+.name {
+    font-size: 1.8em;
+    color: #444;
+    font-weight: 300;
+    text-align: center;
+    margin: 60px;
+}
+
+.pair {
+    display: flex;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    justify-content: center;
+    -webkit-justify-content: center;
+    -ms-box-pack: center;
+    -ms-box-align: center;
+}
+
+.card {
+    flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    max-width: 590px;
+    margin: 0 10px;
+}
+
+.lang {
+    font-size: 1.3em;
+    color: #666;
+    padding-bottom: 0;
+    font-weight: 200;
+    letter-spacing: 0.07em;
+}
+
+.code {
+    font-size: 1.15em;
+    background-color: white;
+    margin: 0.4em 0 0 0;
+    padding: 0.4em;
+    line-height: 1.3em;
+}
+.section:nth-child(2n) .code {
+    background-color: #f4f4f4;
+}
+
+#fork-me {
+    position: absolute;
+    right: 0;
+}
+
+#note {
+    font-size: 1.5em;
+    color: #fff;
+    text-align: center;
+    padding: 0.6em;
+    background: #414141;
+    font-weight: 300;
+    letter-spacing: 0.05em;
+}
+</style><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/languages/go.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/languages/swift.min.js"></script><script defer="true">hljs.initHighlightingOnLoad();</script></head><body><a target="_blank" href="https://github.com/kibotu/java-is-like-kotlin"><img id="fork-me" src="http://kibotu.github.io/java-is-like-kotlin/fork-me.png"></a><div id="note">Java is like Kotlin</div><div class="section"><div class="title">BASICS</div><div class="case"><div class="name">Hello World</div><div class="pair"><div class="card"><div class="lang">Java</div><pre class="code"><code>System.out.println("Hello, world!")</code></pre></div><div class="card"><div class="lang">Kotlin</div><pre class="code"><code>println("Hello, world!")
+</code></pre></div></div></div><div class="case"><div class="name">Variables And Constants</div><div class="pair"><div class="card"><div class="lang">Java</div><pre class="code"><code>int myVariable = 42;
+myVariable = 50;
+final int myConstant = 42;</code></pre></div><div class="card"><div class="lang">Kotlin</div><pre class="code"><code>var myVariable = 42
 myVariable = 50
 val myConstant = 42
+//test
 </code></pre></div></div></div><div class="case"><div class="name">Explicit Types</div><div class="pair"><div class="card"><div class="lang">Java</div><pre class="code"><code></code></pre></div><div class="card"><div class="lang">Kotlin</div><pre class="code"><code>val explicitDouble: Double = 70.0
 </code></pre></div></div></div><div class="case"><div class="name">Type Coercion</div><div class="pair"><div class="card"><div class="lang">Java</div><pre class="code"><code></code></pre></div><div class="card"><div class="lang">Kotlin</div><pre class="code"><code>val label = "The width is "
 val width = 94
