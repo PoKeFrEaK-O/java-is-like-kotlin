@@ -1,4 +1,5 @@
 var myVariable = 42
 myVariable = 50
 val myConstant = 42
-//test
+// Kotlin has the keywords var (variable) and val (constant).
+// The compiler in Kotlin can automatically assign the corresponding data type to a value.
