@@ -127,11 +127,16 @@ if(widthLabel is String) {
         println("widthLabel is of type String")
     }
 // widthLabel is a String
-</code></pre></div></div></div><div class="case"><div class="name">String Interpolation</div><div class="pair"><div class="card"><div class="lang">Java</div><pre class="code"><code></code></pre></div><div class="card"><div class="lang">Kotlin</div><pre class="code"><code>val apples = 3
+</code></pre></div></div></div><div class="case"><div class="name">String Interpolation</div><div class="pair"><div class="card"><div class="lang">Java</div><pre class="code"><code>int apples = 3;
+int oranges = 5;
+String fruitSummary = "I have " + (apples + oranges) +
+    " pieces of fruit.";</code></pre></div><div class="card"><div class="lang">Kotlin</div><pre class="code"><code>val apples = 3
 val oranges = 5
-val fruitSummary = "I have ${apples + oranges} " +
-                   "pieces of fruit."
-</code></pre></div></div></div><div class="case"><div class="name">Range Operator</div><div class="pair"><div class="card"><div class="lang">Java</div><pre class="code"><code></code></pre></div><div class="card"><div class="lang">Kotlin</div><pre class="code"><code>val names = arrayOf("Anna", "Alex", "Brian", "Jack")
+val fruitSummary = "I have ${apples + oranges}" +
+    " pieces of fruit."
+
+// String Interpolation:
+// Evaluate a string literal that contains one or more placeholders.</code></pre></div></div></div><div class="case"><div class="name">Range Operator</div><div class="pair"><div class="card"><div class="lang">Java</div><pre class="code"><code></code></pre></div><div class="card"><div class="lang">Kotlin</div><pre class="code"><code>val names = arrayOf("Anna", "Alex", "Brian", "Jack")
 val count = names.count()
 for (i in 0..count - 1) {
     println("Person ${i + 1} is called ${names[i]}")
