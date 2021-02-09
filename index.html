@@ -116,9 +116,17 @@ val myConstant = 42
 double explicitDouble = 70.0d;</code></pre></div><div class="card"><div class="lang">Kotlin</div><pre class="code"><code>val explicitDouble: Double = 70.0
 
 // Implicit: automatically
-// Explicit: manually</code></pre></div></div></div><div class="case"><div class="name">Type Coercion</div><div class="pair"><div class="card"><div class="lang">Java</div><pre class="code"><code></code></pre></div><div class="card"><div class="lang">Kotlin</div><pre class="code"><code>val label = "The width is "
+// Explicit: manually</code></pre></div></div></div><div class="case"><div class="name">Type Coercion</div><div class="pair"><div class="card"><div class="lang">Java</div><pre class="code"><code>String label = "The width is ";
+int width = 94;
+String widthLabel = label + width;
+System.out.println(widthLabel);
+// widthLabel is a String</code></pre></div><div class="card"><div class="lang">Kotlin</div><pre class="code"><code>val label = "The width is "
 val width = 94
 val widthLabel = label + width
+if(widthLabel is String) {
+        println("widthLabel is of type String")
+    }
+// widthLabel is a String
 </code></pre></div></div></div><div class="case"><div class="name">String Interpolation</div><div class="pair"><div class="card"><div class="lang">Java</div><pre class="code"><code></code></pre></div><div class="card"><div class="lang">Kotlin</div><pre class="code"><code>val apples = 3
 val oranges = 5
 val fruitSummary = "I have ${apples + oranges} " +
