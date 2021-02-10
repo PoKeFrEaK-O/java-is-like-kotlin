@@ -30,6 +30,9 @@ html
       .case (.name "Variables And Constants") $ .pair
         .card (.lang Java) $ pre.code $ code (@insert code/variables-and-constants.java)
         .card (.lang Kotlin) $ pre.code $ code (@insert code/variables-and-constants.kt)
+      .case (.name "Nullability") $ .pair
+        .card (.lang Java) $ pre.code $ code (@insert code/nullability.java)
+        .card (.lang Kotlin) $ pre.code $ code (@insert code/nullability.kt)
       .case (.name "Explicit Types") $ .pair
         .card (.lang Java) $ pre.code $ code (@insert code/explicit-types.java)
         .card (.lang Kotlin) $ pre.code $ code (@insert code/explicit-types.kt)
