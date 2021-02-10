@@ -111,7 +111,7 @@ myVariable = 50
 val myConstant = 42
 // Kotlin has the keywords var (variable) and val (constant).
 // The compiler in Kotlin can automatically assign the corresponding data type to a value.
-</code></pre></div></div></div><div class="case"><div class="name">Explicit Types</div><div class="pair"><div class="card"><div class="lang">Java</div><pre class="code"><code>double explicitDouble = 70.0;
+</code></pre></div></div></div><div class="case"><div class="name">Nullability</div><div class="pair"><div class="card"><div class="lang">Java</div><pre class="code"><code></code></pre></div><div class="card"><div class="lang">Kotlin</div><pre class="code"><code></code></pre></div></div></div><div class="case"><div class="name">Explicit Types</div><div class="pair"><div class="card"><div class="lang">Java</div><pre class="code"><code>double explicitDouble = 70.0;
 // oder
 double explicitDouble = 70.0d;</code></pre></div><div class="card"><div class="lang">Kotlin</div><pre class="code"><code>val explicitDouble: Double = 70.0
 
@@ -136,7 +136,15 @@ val fruitSummary = "I have ${apples + oranges}" +
     " pieces of fruit."
 
 // String Interpolation:
-// Evaluate a string literal that contains one or more placeholders.</code></pre></div></div></div><div class="case"><div class="name">Range Operator</div><div class="pair"><div class="card"><div class="lang">Java</div><pre class="code"><code></code></pre></div><div class="card"><div class="lang">Kotlin</div><pre class="code"><code>val names = arrayOf("Anna", "Alex", "Brian", "Jack")
+// Evaluate a string literal that contains one or more placeholders.</code></pre></div></div></div><div class="case"><div class="name">Range Operator</div><div class="pair"><div class="card"><div class="lang">Java</div><pre class="code"><code>String[] names = {"Anna", "Alex", "Brian", "Jack"};
+for (int i = 0; i < names.length; i++) {
+    System.out.println("Person " + (i + 1) + " is called " + names[i]);
+}
+// Person 1 is called Anna
+// Person 2 is called Alex
+// Person 3 is called Brian
+// Person 4 is called Jack
+</code></pre></div><div class="card"><div class="lang">Kotlin</div><pre class="code"><code>val names = arrayOf("Anna", "Alex", "Brian", "Jack")
 val count = names.count()
 for (i in 0..count - 1) {
     println("Person ${i + 1} is called ${names[i]}")
