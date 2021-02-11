@@ -120,13 +120,30 @@ double explicitDouble = 70.0d;</code></pre></div><div class="card"><div class="l
 int width = 94;
 String widthLabel = label + width;
 System.out.println(widthLabel);
-// widthLabel is a String</code></pre></div><div class="card"><div class="lang">Kotlin</div><pre class="code"><code>val label = "The width is "
+// widthLabel is a String
+
+// TypeCoercion Error Example:
+System.out.println('A' + 0);
+// 65
+System.out.println('A' + 50 + "A");
+// 115A
+System.out.println("A" + 'A' + 50);
+// AA50
+</code></pre></div><div class="card"><div class="lang">Kotlin</div><pre class="code"><code>val label = "The width is "
 val width = 94
 val widthLabel = label + width
 if(widthLabel is String) {
         println("widthLabel is of type String")
     }
 // widthLabel is a String
+
+// TypeCoercion Error Example:
+println('A' + 0)
+// A
+println('A' + 50 + "A")
+// sA
+println("A" + 'A' + 50)
+// AA50
 </code></pre></div></div></div><div class="case"><div class="name">String Interpolation</div><div class="pair"><div class="card"><div class="lang">Java</div><pre class="code"><code>int apples = 3;
 int oranges = 5;
 String fruitSummary = "I have " + (apples + oranges) +
