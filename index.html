@@ -169,10 +169,24 @@ IntStream.rangeClosed(1, 5).forEach(
 // 3 times 5 is 15
 // 4 times 5 is 20
 // 5 times 5 is 25
-</code></pre></div></div></div></div><div class="section"><div class="title">BASICS</div><div class="case"><div class="name">Arrays</div><div class="pair"><div class="card"><div class="lang">Java</div><pre class="code"><code>List<String> shoppingList = Arrays.asList("catfish", "water", "tulips", "blue paint");
-        shoppingList.set(1, "bottle of water");</code></pre></div><div class="card"><div class="lang">Kotlin</div><pre class="code"><code>val shoppingList = arrayOf("catfish", "water",
+</code></pre></div></div></div></div><div class="section"><div class="title">BASICS</div><div class="case"><div class="name">Arrays</div><div class="pair"><div class="card"><div class="lang">Java</div><pre class="code"><code>List<String> shoppingList = java.util.Arrays.asList("catfish", "water", "tulips", "blue paint");
+shoppingList.set(1, "bottle of water");
+for (String s : shoppingList) {
+    System.out.println(s);
+}
+// catfish
+// bottle of water
+// tulips
+// blue paint</code></pre></div><div class="card"><div class="lang">Kotlin</div><pre class="code"><code>val shoppingList = arrayOf("catfish", "water",
         "tulips", "blue paint")
-shoppingList[1] = "bottle of water"
+    shoppingList[1] = "bottle of water"
+    for (element in shoppingList) {
+        println(element)
+    }
+// catfish
+// bottle of water
+// tulips
+// blue paint
 </code></pre></div></div></div><div class="case"><div class="name">Maps</div><div class="pair"><div class="card"><div class="lang">Java</div><pre class="code"><code></code></pre></div><div class="card"><div class="lang">Kotlin</div><pre class="code"><code>val occupations = mutableMapOf(
     "Malcolm" to "Captain",
     "Kaylee" to "Mechanic"
