@@ -100,7 +100,7 @@ float myNumFloat = 5.99f;    // Size: 4 bytes, Stores fractional numbers.
                              // Sufficient for storing 6 to 7 decimal digits
 double myNumDouble = 76.24d; // Size: 8 bytes, Stores fractional numbers.
                              // Sufficient for storing 15 decimal digits
-boolean myBool = true;       // Size: 1 bit, Stores true or false values
+boolean myBool = true;
 char myLetter = 'D';         // Size: 2 bytes, Stores a single character/letter or ASCII
 
 // Non-Primitive Data Types:
@@ -111,7 +111,45 @@ myVariable = 50
 val myConstant = 42
 // Kotlin has the keywords var (variable) and val (constant).
 // The compiler in Kotlin can automatically assign the corresponding data type to a value.
-</code></pre></div></div></div><div class="case"><div class="name">Nullability</div><div class="pair"><div class="card"><div class="lang">Java</div><pre class="code"><code></code></pre></div><div class="card"><div class="lang">Kotlin</div><pre class="code"><code></code></pre></div></div></div><div class="case"><div class="name">Explicit Types</div><div class="pair"><div class="card"><div class="lang">Java</div><pre class="code"><code>double explicitDouble = 70.0;
+
+val myNumByte: Byte = 17
+val myNuShort: Short = 5555
+val myNumInt: Int = 1000000000
+val myNumLong: Long = 100000000000000000
+val myNumFloat: Float = 5.99f
+val myNumDouble: Double = 76.24
+val myTrue: Boolean = true
+val myFalse: Boolean = false
+val boolNull: Boolean? = null
+val myChar: Char = 'a'
+val myString: String = "Hello World"
+
+// Creates an Array<String> with values ["0", "1", "4", "9", "16"]
+val asc = Array(5) { i -> (i * i).toString() }
+asc.forEach { println(it) }
+
+// Primitive type arrays:
+val myArray = IntArray(5) {42} // Array of int of size 5 with values [42, 42, 42, 42, 42]
+myArray.forEach { println(it) }
+// There are also, ByteArray, ShortArray,
+</code></pre></div></div></div><div class="case"><div class="name">Integer (Wrapper Class) vs int (Primitive Data Type)</div><div class="pair"><div class="card"><div class="lang">Java</div><pre class="code"><code>// Integer --> is a class or a reference type defined in the standard library
+//         --> stores a reference to an object containing a value
+
+// int --> is a primitive type and part of the language itself
+//     --> stores an actual value
+
+// Integer is the wrapper type for int, and objects of type Integer are boxed values.
+
+// Each primitive type has a corresponding wrapper type:
+// Primitive Data Type <--> Wrapper Class
+// byte         <-->    Byte
+// short        <--> 	Short
+// int          <--> 	Integer
+// long         <--> 	Long
+// float 	<-->    Float
+// double 	<-->    Double
+// boolean 	<-->    Boolean
+// char 	<-->    Character</code></pre></div><div class="card"><div class="lang">Kotlin</div><pre class="code"><code></code></pre></div></div></div><div class="case"><div class="name">Nullability</div><div class="pair"><div class="card"><div class="lang">Java</div><pre class="code"><code></code></pre></div><div class="card"><div class="lang">Kotlin</div><pre class="code"><code></code></pre></div></div></div><div class="case"><div class="name">Explicit Types</div><div class="pair"><div class="card"><div class="lang">Java</div><pre class="code"><code>double explicitDouble = 70.0;
 // oder
 double explicitDouble = 70.0d;</code></pre></div><div class="card"><div class="lang">Kotlin</div><pre class="code"><code>val explicitDouble: Double = 70.0
 
