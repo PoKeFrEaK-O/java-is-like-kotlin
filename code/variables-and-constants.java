@@ -12,7 +12,7 @@ float myNumFloat = 5.99f;    // Size: 4 bytes, Stores fractional numbers.
                              // Sufficient for storing 6 to 7 decimal digits
 double myNumDouble = 76.24d; // Size: 8 bytes, Stores fractional numbers.
                              // Sufficient for storing 15 decimal digits
-boolean myBool = true;       // Size: 1 bit, Stores true or false values
+boolean myBool = true;
 char myLetter = 'D';         // Size: 2 bytes, Stores a single character/letter or ASCII
 
 // Non-Primitive Data Types:
