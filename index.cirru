@@ -33,6 +33,9 @@ html
       .case (.name "Integer (Wrapper Class) vs int (Primitive Data Type)") $ .pair
         .card (.lang Java) $ pre.code $ code (@insert code/Integer-vs-int.java)
         .card (.lang Kotlin) $ pre.code $ code (@insert code/Integer-vs-int.kt)
+      .case (.name "Annotations") $ .pair
+        .card (.lang Java) $ pre.code $ code (@insert code/annotations.java)
+        .card (.lang Kotlin) $ pre.code $ code (@insert code/annotations.kt)
       .case (.name "Nullability") $ .pair
         .card (.lang Java) $ pre.code $ code (@insert code/nullability.java)
         .card (.lang Kotlin) $ pre.code $ code (@insert code/nullability.kt)
