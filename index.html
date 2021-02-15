@@ -168,7 +168,26 @@ myArray.forEach { println(it) }
 // a field, a method parameter or a methods return value.
 
 @Nullable
-// Same as @NonNull, only with nullable instead of non-null.</code></pre></div><div class="card"><div class="lang">Kotlin</div><pre class="code"><code></code></pre></div></div></div><div class="case"><div class="name">Explicit Types</div><div class="pair"><div class="card"><div class="lang">Java</div><pre class="code"><code>double explicitDouble = 70.0;
+// Same as @NonNull, only with nullable instead of non-null.</code></pre></div><div class="card"><div class="lang">Kotlin</div><pre class="code"><code>// By default, Kotlin assumes that value cannot be null.
+// You cannot assign null to reference a, and if you try to do so, it will result in a compiler error:
+var a: String = "value"
+//a = null
+// Error: null can not be a value of a non-null type String
+
+// If we want to create a nullable reference,
+// we need to create append the question mark(?) to the type definition:
+var b: String? = "value"
+b = null
+println(b)
+// No Error
+// println(b) --> null
+
+// When we want to access the b reference, we must handle the null case explicitly:
+if (b != null) {
+    println("b ist nicht null, sondern $b")
+} else {
+    println("b ist null")
+}</code></pre></div></div></div><div class="case"><div class="name">Explicit Types</div><div class="pair"><div class="card"><div class="lang">Java</div><pre class="code"><code>double explicitDouble = 70.0;
 // oder
 double explicitDouble = 70.0d;</code></pre></div><div class="card"><div class="lang">Kotlin</div><pre class="code"><code>val explicitDouble: Double = 70.0
 
