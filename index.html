@@ -262,7 +262,76 @@ IntStream.rangeClosed(1, 5).forEach(
 // 3 times 5 is 15
 // 4 times 5 is 20
 // 5 times 5 is 25
-</code></pre></div></div></div></div><div class="section"><div class="title">BASICS</div><div class="case"><div class="name">Arrays</div><div class="pair"><div class="card"><div class="lang">Java</div><pre class="code"><code>List<String> shoppingList = java.util.Arrays.asList("catfish", "water", "tulips", "blue paint");
+</code></pre></div></div></div></div><div class="section"><div class="title">Conditions and Loops</div><div class="case"><div class="name">while-loops</div><div class="pair"><div class="card"><div class="lang">Java</div><pre class="code"><code>while ( Bedingung ) {
+    Anweisung;
+}
+
+do {
+    Anweisung;
+} while ( Bedingung );
+// Die Anweisung wird unabhängig der Bedingung immer mindestens 1-mal ausgeführt.
+
+// Example:
+int zahl = 1;
+while (zahl <= 3) {
+    System.out.println(zahl);
+    zahl++;
+}
+System.out.println();
+do {
+    System.out.println("Ich werde vor der Bedingung mindestens einmal ausgeführt.");
+    System.out.println(zahl);
+    zahl++;
+} while (zahl <= 3);
+
+// Ausgabe:
+// 1
+// 2
+// 3
+//
+// Ich werde vor der Bedingung mindestens einmal ausgeführt.
+// 4</code></pre></div><div class="card"><div class="lang">Kotlin</div><pre class="code"><code>while ( Bedingung ) {
+    Anweisung
+}
+
+do {
+    Anweisung
+} while ( Bedingung )
+// Die Anweisung wird unabhängig der Bedingung immer mindestens 1-mal ausgeführt.
+
+// Example:
+var zahl: Int = 1
+while (zahl <= 3){
+    println(zahl)
+    zahl++
+}
+println()
+do {
+    println("Ich werde vor der Bedingung mindestens einmal ausgeführt.")
+    println(zahl)
+    zahl++
+} while (zahl <= 3)
+
+// Ausgabe:
+// 1
+// 2
+// 3
+//
+// Ich werde vor der Bedingung mindestens einmal ausgeführt.
+// 4</code></pre></div></div></div><div class="case"><div class="name">for-loops</div><div class="pair"><div class="card"><div class="lang">Java</div><pre class="code"><code>for ( Laufvariable; Bedingung; Veränderung ) {
+    Anweisung;
+}
+
+// Example:
+for (int counter = 1; counter <= 5; counter++) {
+    System.out.println("Zaeler ist bei: " + counter);
+}
+// Ausgabe:
+// Zaeler ist bei: 1
+// Zaeler ist bei: 2
+// Zaeler ist bei: 3
+// Zaeler ist bei: 4
+// Zaeler ist bei: 5</code></pre></div><div class="card"><div class="lang">Kotlin</div><pre class="code"><code></code></pre></div></div></div></div><div class="section"><div class="title">BASICS</div><div class="case"><div class="name">Arrays</div><div class="pair"><div class="card"><div class="lang">Java</div><pre class="code"><code>List<String> shoppingList = java.util.Arrays.asList("catfish", "water", "tulips", "blue paint");
 shoppingList.set(1, "bottle of water");
 for (String s : shoppingList) {
     System.out.println(s);
