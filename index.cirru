@@ -56,6 +56,15 @@ html
         .card (.lang Kotlin) $ pre.code $ code (@insert code/inclusive-range-operator.kt)
 
     .section
+      .title "Conditions and Loops"
+      .case (.name "while-loops") $ .pair
+        .card (.lang Java) $ pre.code $ code (@insert code/while.java)
+        .card (.lang Kotlin) $ pre.code $ code (@insert code/while.kt)
+      .case (.name "Loops (while/for/foreach)") $ .pair
+        .card (.lang Java) $ pre.code $ code (@insert code/loops.java)
+        .card (.lang Kotlin) $ pre.code $ code (@insert code/loops.kt)
+
+    .section
       .title BASICS
       .case (.name "Arrays") $ .pair
         .card (.lang Java) $ pre.code $ code (@insert code/arrays.java)
