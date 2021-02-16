@@ -60,9 +60,9 @@ html
       .case (.name "while-loops") $ .pair
         .card (.lang Java) $ pre.code $ code (@insert code/while.java)
         .card (.lang Kotlin) $ pre.code $ code (@insert code/while.kt)
-      .case (.name "Loops (while/for/foreach)") $ .pair
-        .card (.lang Java) $ pre.code $ code (@insert code/loops.java)
-        .card (.lang Kotlin) $ pre.code $ code (@insert code/loops.kt)
+      .case (.name "for-loops") $ .pair
+        .card (.lang Java) $ pre.code $ code (@insert code/for.java)
+        .card (.lang Kotlin) $ pre.code $ code (@insert code/for.kt)
 
     .section
       .title BASICS
