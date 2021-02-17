@@ -331,7 +331,91 @@ for (int counter = 1; counter <= 5; counter++) {
 // Zaeler ist bei: 2
 // Zaeler ist bei: 3
 // Zaeler ist bei: 4
-// Zaeler ist bei: 5</code></pre></div><div class="card"><div class="lang">Kotlin</div><pre class="code"><code></code></pre></div></div></div></div><div class="section"><div class="title">BASICS</div><div class="case"><div class="name">Arrays</div><div class="pair"><div class="card"><div class="lang">Java</div><pre class="code"><code>List<String> shoppingList = java.util.Arrays.asList("catfish", "water", "tulips", "blue paint");
+// Zaeler ist bei: 5</code></pre></div><div class="card"><div class="lang">Kotlin</div><pre class="code"><code>for (counter in 1..5) {
+    println("Zaeler ist bei: $counter")
+}
+// Ausgabe:
+// Zaeler ist bei: 1
+// Zaeler ist bei: 2
+// Zaeler ist bei: 3
+// Zaeler ist bei: 4
+// Zaeler ist bei: 5
+
+// No need to declare the data type of variable.
+// If iterating over a range, we can use in
+// the lower and upper (including) limit can
+// be defined on both the sides of .. Operator.</code></pre></div></div></div><div class="case"><div class="name">for-each-loops</div><div class="pair"><div class="card"><div class="lang">Java</div><pre class="code"><code>for ( Datentyp Element : Collection ){
+    // Bedingung, die Element enthält
+}
+
+public static void main(String[] args) {
+    int viererReihe [] = new int [5];
+    for (int i = 0; i < viererReihe.length; i++) {
+        viererReihe[i] = (i + 1) * 4;
+    }
+    for (int i: viererReihe){
+        System.out.println(i);
+    }
+}
+// Ausgabe:
+// 4
+// 8
+// 12
+// 16
+// 20</code></pre></div><div class="card"><div class="lang">Kotlin</div><pre class="code"><code>val viererReihe = IntArray(5)
+for (i in viererReihe.indices) {
+    viererReihe[i] = (i + 1) * 4
+}
+for (i in viererReihe) {
+    println(i)
+}
+
+// Ausgabe:
+// 4
+// 8
+// 12
+// 16
+// 20</code></pre></div></div></div><div class="case"><div class="name">if-expression</div><div class="pair"><div class="card"><div class="lang">Java</div><pre class="code"><code>int zahl = 2;
+if (zahl <= 1){
+    System.out.println(zahl + " kleiner oder gleich 1");
+} else if (zahl == 2) {
+    System.out.println(zahl + " ist gleich 2");
+} else {
+    System.out.println(zahl + " ist größer als 2");
+}
+// Ausgabe:
+// 2 ist gleich 2</code></pre></div><div class="card"><div class="lang">Kotlin</div><pre class="code"><code>var zahl: Int = 2
+if (zahl <= 1) {
+    println("$zahl kleiner oder gleich 1")
+} else if (zahl == 2) {
+    println("$zahl ist gleich 2")
+} else {
+    println("$zahl ist größer als 2")
+}
+// Ausgabe:
+// 2 ist gleich 2</code></pre></div></div></div><div class="case"><div class="name">switch/when</div><div class="pair"><div class="card"><div class="lang">Java</div><pre class="code"><code>int zahl = 2;
+switch (zahl) {
+    case 1:
+        System.out.println("Zahl ist gleich 1");
+        break;
+    case 2:
+        System.out.println("Zahl ist gleich 2");
+        break;
+    default:
+        System.out.println("Zahl ist weder 1 noch 2");
+        break;
+}
+// Ausgabe:
+// Zahl ist gleich 2</code></pre></div><div class="card"><div class="lang">Kotlin</div><pre class="code"><code>var zahl: Int = 2
+when (zahl) {
+    1 -> println("Zahl ist gleich 1")
+    2 -> println("Zahl ist gleich 2")
+    else -> {
+        println("Zahl ist weder 1 noch 2")
+    }
+}
+// Ausgabe:
+// Zahl ist gleich 2</code></pre></div></div></div></div><div class="section"><div class="title">BASICS</div><div class="case"><div class="name">Arrays</div><div class="pair"><div class="card"><div class="lang">Java</div><pre class="code"><code>List<String> shoppingList = java.util.Arrays.asList("catfish", "water", "tulips", "blue paint");
 shoppingList.set(1, "bottle of water");
 for (String s : shoppingList) {
     System.out.println(s);
