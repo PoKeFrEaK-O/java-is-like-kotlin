@@ -66,6 +66,9 @@ html
       .case (.name "for-each-loops") $ .pair
         .card (.lang Java) $ pre.code $ code (@insert code/foreach.java)
         .card (.lang Kotlin) $ pre.code $ code (@insert code/foreach.kt)
+      .case (.name "if-expression") $ .pair
+        .card (.lang Java) $ pre.code $ code (@insert code/if.java)
+        .card (.lang Kotlin) $ pre.code $ code (@insert code/if.kt)
 
     .section
       .title BASICS
