@@ -69,6 +69,9 @@ html
       .case (.name "if-expression") $ .pair
         .card (.lang Java) $ pre.code $ code (@insert code/if.java)
         .card (.lang Kotlin) $ pre.code $ code (@insert code/if.kt)
+      .case (.name "switch/when") $ .pair
+        .card (.lang Java) $ pre.code $ code (@insert code/if.java)
+        .card (.lang Kotlin) $ pre.code $ code (@insert code/if.kt)
 
     .section
       .title BASICS
