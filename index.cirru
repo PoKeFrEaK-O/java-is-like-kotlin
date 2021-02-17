@@ -63,6 +63,9 @@ html
       .case (.name "for-loops") $ .pair
         .card (.lang Java) $ pre.code $ code (@insert code/for.java)
         .card (.lang Kotlin) $ pre.code $ code (@insert code/for.kt)
+      .case (.name "for-each-loops") $ .pair
+        .card (.lang Java) $ pre.code $ code (@insert code/foreach.java)
+        .card (.lang Kotlin) $ pre.code $ code (@insert code/foreach.kt)
 
     .section
       .title BASICS
