@@ -66,6 +66,9 @@ html
       .case (.name "break") $ .pair
         .card (.lang Java) $ pre.code $ code (@insert code/break.java)
         .card (.lang Kotlin) $ pre.code $ code (@insert code/break.kt)
+      .case (.name "continue") $ .pair
+        .card (.lang Java) $ pre.code $ code (@insert code/continue.java)
+        .card (.lang Kotlin) $ pre.code $ code (@insert code/continue.kt)
       .case (.name "for-each-loops") $ .pair
         .card (.lang Java) $ pre.code $ code (@insert code/foreach.java)
         .card (.lang Kotlin) $ pre.code $ code (@insert code/foreach.kt)
