@@ -1,4 +1,5 @@
 while ( Bedingung ) {
+    // Bedingung muss True sein, damit die Anweisung ausgeführt wird.
     Anweisung
 }
 

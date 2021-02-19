@@ -1,4 +1,5 @@
 for ( Laufvariable; Bedingung; Veränderung ) {
+    // Bedingung muss True sein, damit die Anweisung ausgeführt wird.
     Anweisung;
 }
 
