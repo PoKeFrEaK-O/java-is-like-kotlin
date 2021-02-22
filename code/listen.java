@@ -1,9 +1,9 @@
-// Ist eine Liste und kein Array
-List<String> shoppingList = java.util.Arrays.asList("catfish", "water", "tulips", "blue paint");
-shoppingList.set(1, "bottle of water");
-for (String s : shoppingList) {
+java.util.List<String> anListWithTheNameList = java.util.Arrays.asList("catfish", "water", "tulips", "blue paint");
+anListWithTheNameList.set(1, "bottle of water");
+for (String s : anListWithTheNameList) {
     System.out.println(s);
 }
+// Ausgabe:
 // catfish
 // bottle of water
 // tulips
