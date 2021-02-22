@@ -80,7 +80,7 @@ html
         .card (.lang Kotlin) $ pre.code $ code (@insert code/when.kt)
 
     .section
-      .title BASICS
+      .title "Collections"
       .case (.name "Arrays") $ .pair
         .card (.lang Java) $ pre.code $ code (@insert code/arrays.java)
         .card (.lang Kotlin) $ pre.code $ code (@insert code/arrays.kt)
