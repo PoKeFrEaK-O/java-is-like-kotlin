@@ -263,6 +263,7 @@ IntStream.rangeClosed(1, 5).forEach(
 // 4 times 5 is 20
 // 5 times 5 is 25
 </code></pre></div></div></div></div><div class="section"><div class="title">Conditions and Loops</div><div class="case"><div class="name">while-loops</div><div class="pair"><div class="card"><div class="lang">Java</div><pre class="code"><code>while ( Bedingung ) {
+    // Bedingung muss True sein, damit die Anweisung ausgeführt wird.
     Anweisung;
 }
 
@@ -291,6 +292,7 @@ do {
 //
 // Ich werde vor der Bedingung mindestens einmal ausgeführt.
 // 4</code></pre></div><div class="card"><div class="lang">Kotlin</div><pre class="code"><code>while ( Bedingung ) {
+    // Bedingung muss True sein, damit die Anweisung ausgeführt wird.
     Anweisung
 }
 
@@ -319,6 +321,7 @@ do {
 //
 // Ich werde vor der Bedingung mindestens einmal ausgeführt.
 // 4</code></pre></div></div></div><div class="case"><div class="name">for-loops</div><div class="pair"><div class="card"><div class="lang">Java</div><pre class="code"><code>for ( Laufvariable; Bedingung; Veränderung ) {
+    // Bedingung muss True sein, damit die Anweisung ausgeführt wird.
     Anweisung;
 }
 
@@ -504,6 +507,7 @@ for (i in viererReihe) {
 // 16
 // 20</code></pre></div></div></div><div class="case"><div class="name">if-expression</div><div class="pair"><div class="card"><div class="lang">Java</div><pre class="code"><code>int zahl = 2;
 if (zahl <= 1){
+    // Bedingung muss True sein, damit die Anweisung ausgeführt wird.
     System.out.println(zahl + " kleiner oder gleich 1");
 } else if (zahl == 2) {
     System.out.println(zahl + " ist gleich 2");
@@ -513,6 +517,7 @@ if (zahl <= 1){
 // Ausgabe:
 // 2 ist gleich 2</code></pre></div><div class="card"><div class="lang">Kotlin</div><pre class="code"><code>var zahl: Int = 2
 if (zahl <= 1) {
+    // Bedingung muss True sein, damit die Anweisung ausgeführt wird.
     println("$zahl kleiner oder gleich 1")
 } else if (zahl == 2) {
     println("$zahl ist gleich 2")
@@ -542,7 +547,86 @@ when (zahl) {
     }
 }
 // Ausgabe:
-// Zahl ist gleich 2</code></pre></div></div></div></div><div class="section"><div class="title">BASICS</div><div class="case"><div class="name">Arrays</div><div class="pair"><div class="card"><div class="lang">Java</div><pre class="code"><code>List<String> shoppingList = java.util.Arrays.asList("catfish", "water", "tulips", "blue paint");
+// Zahl ist gleich 2</code></pre></div></div></div></div><div class="section"><div class="title">Collections</div><div class="case"><div class="name">Arrays</div><div class="pair"><div class="card"><div class="lang">Java</div><pre class="code"><code>// declares an array of String:
+String[] anArrayWithTheNameArray;
+// allocates memory for 4 String:
+anArrayWithTheNameArray = new String[4];
+
+// initialize of elements:
+anArrayWithTheNameArray[0] = "catfish";
+anArrayWithTheNameArray[1] = "water";
+anArrayWithTheNameArray[2] = "tulips";
+anArrayWithTheNameArray[3] = "blue paint";
+
+// Replacing the second element
+anArrayWithTheNameArray[1] = "bottle of water";
+
+for (String element : anArrayWithTheNameArray) {
+    System.out.println(element);
+}
+
+// Ausgabe:
+// catfish
+// bottle of water
+// tulips
+// blue paint
+---------------------------------------------------------------
+
+// Declares an array of String and initialize the elements in one:
+String[] anArrayWithTheNameArray = {"catfish", "water", "tulips", "blue paint"};
+
+// Replacing the second element
+anArrayWithTheNameArray[1] = "bottle of water";
+
+for (String element : anArrayWithTheNameArray) {
+    System.out.println(element);
+}
+// Ausgabe:
+// catfish
+// bottle of water
+// tulips
+// blue paint
+</code></pre></div><div class="card"><div class="lang">Kotlin</div><pre class="code"><code>// declares an array of String:
+
+// allocates memory for 4 String:
+val anArrayWithTheNameArray: Array<String?> = arrayOfNulls(4)
+// ? --> Can be null.
+
+// initialize of elements:
+anArrayWithTheNameArray[0] = "catfish"
+anArrayWithTheNameArray[1] = "water"
+anArrayWithTheNameArray[2] = "tulips"
+anArrayWithTheNameArray[3] = "blue paint"
+
+// Replacing the second element
+anArrayWithTheNameArray[1] = "bottle of water"
+
+for (element in anArrayWithTheNameArray) {
+    println(element)
+}
+// Ausgabe:
+// catfish
+// bottle of water
+// tulips
+// blue paint
+---------------------------------------------------------------
+
+// Declares an array of String and initialize the elements in one:
+val anArrayWithTheNameArray = arrayOf("catfish", "water",
+    "tulips", "blue paint")
+
+// Replacing the second element
+anArrayWithTheNameArray[1] = "bottle of water"
+
+for (element in anArrayWithTheNameArray) {
+    println(element)
+}
+// Ausgabe:
+// catfish
+// bottle of water
+// tulips
+// blue paint</code></pre></div></div></div><div class="case"><div class="name">Listen</div><div class="pair"><div class="card"><div class="lang">Java</div><pre class="code"><code>// Ist eine Liste und kein Array
+List<String> shoppingList = java.util.Arrays.asList("catfish", "water", "tulips", "blue paint");
 shoppingList.set(1, "bottle of water");
 for (String s : shoppingList) {
     System.out.println(s);
@@ -550,17 +634,7 @@ for (String s : shoppingList) {
 // catfish
 // bottle of water
 // tulips
-// blue paint</code></pre></div><div class="card"><div class="lang">Kotlin</div><pre class="code"><code>val shoppingList = arrayOf("catfish", "water",
-        "tulips", "blue paint")
-    shoppingList[1] = "bottle of water"
-    for (element in shoppingList) {
-        println(element)
-    }
-// catfish
-// bottle of water
-// tulips
-// blue paint
-</code></pre></div></div></div><div class="case"><div class="name">Maps</div><div class="pair"><div class="card"><div class="lang">Java</div><pre class="code"><code></code></pre></div><div class="card"><div class="lang">Kotlin</div><pre class="code"><code>val occupations = mutableMapOf(
+// blue paint</code></pre></div><div class="card"><div class="lang">Kotlin</div><pre class="code"><code></code></pre></div></div></div><div class="case"><div class="name">Maps</div><div class="pair"><div class="card"><div class="lang">Java</div><pre class="code"><code></code></pre></div><div class="card"><div class="lang">Kotlin</div><pre class="code"><code>val occupations = mutableMapOf(
     "Malcolm" to "Captain",
     "Kaylee" to "Mechanic"
 )
