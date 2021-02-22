@@ -84,6 +84,9 @@ html
       .case (.name "Arrays") $ .pair
         .card (.lang Java) $ pre.code $ code (@insert code/arrays.java)
         .card (.lang Kotlin) $ pre.code $ code (@insert code/arrays.kt)
+      .case (.name "Listen") $ .pair
+        .card (.lang Java) $ pre.code $ code (@insert code/listen.java)
+        .card (.lang Kotlin) $ pre.code $ code (@insert code/listen.kt)
       .case (.name "Maps") $ .pair
         .card (.lang Java) $ pre.code $ code (@insert code/maps.java)
         .card (.lang Kotlin) $ pre.code $ code (@insert code/maps.kt)
