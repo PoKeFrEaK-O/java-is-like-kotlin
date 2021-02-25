@@ -95,6 +95,18 @@ html
         .card (.lang Kotlin) $ pre.code $ code (@insert code/empty-collections.kt)
 
     .section
+      .title "Combining multiple collections."
+      .case (.name "AddAll") $ .pair
+        .card (.lang Java) $ pre.code $ code (@insert code/AddAll.java)
+        .card (.lang Kotlin) $ pre.code $ code (@insert code/AddAll.kt)
+      .case (.name "Intersection/retainAll") $ .pair
+        .card (.lang Java) $ pre.code $ code (@insert code/IntersectionRetainAll.java)
+        .card (.lang Kotlin) $ pre.code $ code (@insert code/IntersectionRetainAll.kt)
+      .case (.name "Union and Intersection of two Lists") $ .pair
+        .card (.lang Java) $ pre.code $ code (@insert code/UnionIntersection.java)
+        .card (.lang Kotlin) $ pre.code $ code (@insert code/UnionIntersection.kt)
+
+    .section
       .title FUNCTIONS
       .case (.name "Functions") $ .pair
         .card (.lang Java) $ pre.code $ code (@insert code/functions.java)
