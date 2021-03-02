@@ -650,7 +650,25 @@ for (s in anListWithTheNameList) {
 occupations["Jayne"] = "Public Relations"
 </code></pre></div></div></div><div class="case"><div class="name">Empty Collections</div><div class="pair"><div class="card"><div class="lang">Java</div><pre class="code"><code></code></pre></div><div class="card"><div class="lang">Kotlin</div><pre class="code"><code>val emptyArray = arrayOf&lt;String>()
 val emptyMap = mapOf&lt;String, Float>()
-</code></pre></div></div></div></div><div class="section"><div class="title">Combining multiple collections.</div><div class="case"><div class="name">Combination of A and B</div><div class="pair"><div class="card"><div class="lang">Java</div><pre class="code"><code>import java.util.ArrayList;
+</code></pre></div></div></div><div class="case"><div class="name">Quantities</div><div class="pair"><div class="card"><div class="lang">Java</div><pre class="code"><code></code></pre></div><div class="card"><div class="lang">Kotlin</div><pre class="code"><code>fun main() {
+    val a = listOf("a", "b", "c", "d")
+    val b = listOf("d", "e", "f", "a")
+    println("a=$a b=$b") // a=[a, b, c, d] b=[d, e, f, a]
+    println("combined ${a + b}") // combined [a, b, c, d, d, e, f, a]
+    println("union ${a.union(b)}") // union [a, b, c, d, e, f]
+    val ab = a.toMutableList()
+    ab.retainAll(b)
+    println("a retainAll b $ab") // a retainAll b [a, d]
+    val ba = b.toMutableList()
+    ba.retainAll(a)
+    println("b retainAll a $ba") // b retainAll a [d, a]
+}
+// Ausgabe:
+// a=[a, b, c, d] b=[d, e, f, a]
+// combined [a, b, c, d, d, e, f, a]
+// union [a, b, c, d, e, f]
+// a retainAll b [a, d]
+// b retainAll a [d, a]</code></pre></div></div></div></div><div class="section"><div class="title">Combining multiple collections.</div><div class="case"><div class="name">Combination of A and B</div><div class="pair"><div class="card"><div class="lang">Java</div><pre class="code"><code>import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -910,7 +928,46 @@ public class Relative_complement_of_A_and_B_2 {
 }
 // Ausgabe:
 // Hello Bob, today is Tuesday.
-// Hello Max, today is Monday.</code></pre></div></div></div><div class="case"><div class="name">Tuple Return</div><div class="pair"><div class="card"><div class="lang">Java</div><pre class="code"><code></code></pre></div><div class="card"><div class="lang">Kotlin</div><pre class="code"><code>data class GasPrices(val a: Double, val b: Double,
+// Hello Max, today is Monday.</code></pre></div></div></div><div class="case"><div class="name">Functions</div><div class="pair"><div class="card"><div class="lang">Java</div><pre class="code"><code></code></pre></div><div class="card"><div class="lang">Kotlin</div><pre class="code"><code>// Functions in Kotlin are declared using the fun keyword:
+fun main() {
+    val result1 = double1(2,2)
+    val result2 = double2(2,2)
+
+    println("double1: $result1 \ndouble2: $result2")
+    // You can also call the function inside the println function:
+    println("double1: ${double1(2,2)}\ndouble2: ${double2(2,2)}")
+
+    println(double3(zahl = 5))
+}
+
+fun double1(zahl: Int, multiplikator: Int): Int {
+    return zahl * multiplikator
+}
+
+// Function with line breaks between parameters:
+fun double2(
+        zahl: Int,
+        multiplikator: Int, // trailing comma
+): Int
+{
+    return zahl * multiplikator
+}
+
+// Function parameters can have default values,
+// which are used when you skip the corresponding argument:
+fun double3(
+        multiplikator: Int = 2,
+        zahl: Int,
+): Int
+{
+    return zahl * multiplikator
+}
+// Ausgabe:
+// double1: 4
+// double2: 4
+// double1: 4
+// double2: 4
+// 10</code></pre></div></div></div><div class="case"><div class="name">Tuple Return</div><div class="pair"><div class="card"><div class="lang">Java</div><pre class="code"><code></code></pre></div><div class="card"><div class="lang">Kotlin</div><pre class="code"><code>data class GasPrices(val a: Double, val b: Double,
      val c: Double)
 fun getGasPrices() = GasPrices(3.59, 3.69, 3.79)
 </code></pre></div></div></div><div class="case"><div class="name">Variable Number Of Arguments</div><div class="pair"><div class="card"><div class="lang">Java</div><pre class="code"><code></code></pre></div><div class="card"><div class="lang">Kotlin</div><pre class="code"><code>fun sumOf(vararg numbers: Int): Int {
