@@ -96,9 +96,9 @@ html
 
     .section
       .title "Combining multiple collections."
-      .case (.name "AddAll") $ .pair
-        .card (.lang Java) $ pre.code $ code (@insert code/AddAll.java)
-        .card (.lang Kotlin) $ pre.code $ code (@insert code/AddAll.kt)
+      .case (.name "Combination of A and B") $ .pair
+        .card (.lang Java) $ pre.code $ code (@insert code/Combination_of_A_and_B.java)
+        .card (.lang Kotlin) $ pre.code $ code (@insert code/Combination_of_A_and_B.kt)
       .case (.name "Intersection/retainAll") $ .pair
         .card (.lang Java) $ pre.code $ code (@insert code/IntersectionRetainAll.java)
         .card (.lang Kotlin) $ pre.code $ code (@insert code/IntersectionRetainAll.kt)
