@@ -120,6 +120,9 @@ html
       .case (.name "Functions") $ .pair
         .card (.lang Java) $ pre.code $ code (@insert code/functions.java)
         .card (.lang Kotlin) $ pre.code $ code (@insert code/functions.kt)
+      .case (.name "Functions") $ .pair
+        .card (.lang Java) $ pre.code $ code (@insert code/functions_2.java)
+        .card (.lang Kotlin) $ pre.code $ code (@insert code/functions_2.kt)
       .case (.name "Tuple Return") $ .pair
         .card (.lang Java) $ pre.code $ code (@insert code/tuple-return.java)
         .card (.lang Kotlin) $ pre.code $ code (@insert code/tuple-return.kt)
