@@ -93,6 +93,9 @@ html
       .case (.name "Empty Collections") $ .pair
         .card (.lang Java) $ pre.code $ code (@insert code/empty-collections.java)
         .card (.lang Kotlin) $ pre.code $ code (@insert code/empty-collections.kt)
+      .case (.name "Quantities") $ .pair
+        .card (.lang Java) $ pre.code $ code (@insert code/quantities.java)
+        .card (.lang Kotlin) $ pre.code $ code (@insert code/quantities.kt)
 
     .section
       .title "Combining multiple collections."
