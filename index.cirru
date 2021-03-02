@@ -102,9 +102,9 @@ html
       .case (.name "Union of A and B") $ .pair
         .card (.lang Java) $ pre.code $ code (@insert code/Union_of_A_and_B.java)
         .card (.lang Kotlin) $ pre.code $ code (@insert code/Union_of_A_and_B.kt)
-      .case (.name "Union and Intersection of two Lists") $ .pair
-        .card (.lang Java) $ pre.code $ code (@insert code/UnionIntersection.java)
-        .card (.lang Kotlin) $ pre.code $ code (@insert code/UnionIntersection.kt)
+      .case (.name "Intersection of A and B") $ .pair
+        .card (.lang Java) $ pre.code $ code (@insert code/Intersection_of_A_and_B.java)
+        .card (.lang Kotlin) $ pre.code $ code (@insert code/Intersection_of_A_and_B.kt)
 
     .section
       .title FUNCTIONS
