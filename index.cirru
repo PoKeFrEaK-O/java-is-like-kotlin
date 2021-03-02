@@ -99,9 +99,9 @@ html
       .case (.name "Combination of A and B") $ .pair
         .card (.lang Java) $ pre.code $ code (@insert code/Combination_of_A_and_B.java)
         .card (.lang Kotlin) $ pre.code $ code (@insert code/Combination_of_A_and_B.kt)
-      .case (.name "Intersection/retainAll") $ .pair
-        .card (.lang Java) $ pre.code $ code (@insert code/IntersectionRetainAll.java)
-        .card (.lang Kotlin) $ pre.code $ code (@insert code/IntersectionRetainAll.kt)
+      .case (.name "Union of A and B") $ .pair
+        .card (.lang Java) $ pre.code $ code (@insert code/Union_of_A_and_B.java)
+        .card (.lang Kotlin) $ pre.code $ code (@insert code/Union_of_A_and_B.kt)
       .case (.name "Union and Intersection of two Lists") $ .pair
         .card (.lang Java) $ pre.code $ code (@insert code/UnionIntersection.java)
         .card (.lang Kotlin) $ pre.code $ code (@insert code/UnionIntersection.kt)
