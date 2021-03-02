@@ -105,6 +105,9 @@ html
       .case (.name "Intersection of A and B") $ .pair
         .card (.lang Java) $ pre.code $ code (@insert code/Intersection_of_A_and_B.java)
         .card (.lang Kotlin) $ pre.code $ code (@insert code/Intersection_of_A_and_B.kt)
+      .case (.name "Symmetric difference of A and B") $ .pair
+        .card (.lang Java) $ pre.code $ code (@insert code/Symmetric_difference_of_A_and_B.java)
+        .card (.lang Kotlin) $ pre.code $ code (@insert code/Symmetric_difference_of_A_and_B.kt)
 
     .section
       .title FUNCTIONS
