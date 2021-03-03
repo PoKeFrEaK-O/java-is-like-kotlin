@@ -129,6 +129,9 @@ html
       .case (.name "Unit-returning") $ .pair
         .card (.lang Java) $ pre.code $ code (@insert code/unit_returning.java)
         .card (.lang Kotlin) $ pre.code $ code (@insert code/unit_returning.kt)
+      .case (.name "Local functions") $ .pair
+        .card (.lang Java) $ pre.code $ code (@insert code/local_functions.java)
+        .card (.lang Kotlin) $ pre.code $ code (@insert code/local_functions.kt)
 
     .section
       .title FUNCTIONS
