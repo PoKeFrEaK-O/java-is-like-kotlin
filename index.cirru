@@ -120,6 +120,9 @@ html
       .case (.name "Parameters") $ .pair
         .card (.lang Java) $ pre.code $ code (@insert code/parameters.java)
         .card (.lang Kotlin) $ pre.code $ code (@insert code/parameters.kt)
+      .case (.name "Default arguments") $ .pair
+        .card (.lang Java) $ pre.code $ code (@insert code/default_arguments.java)
+        .card (.lang Kotlin) $ pre.code $ code (@insert code/default_arguments.kt)
 
     .section
       .title FUNCTIONS
