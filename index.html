@@ -896,7 +896,86 @@ public class Relative_complement_of_A_and_B_2 {
 // Liste B: [f, e, h, b, e]
 // ------------------
 // Relative complement of a and b: [a, c, d]
-// Relative complement of a and b: [a, c, d]</code></pre></div></div></div></div><div class="section"><div class="title">FUNCTIONS</div><div class="case"><div class="name">Functions</div><div class="pair"><div class="card"><div class="lang">Java</div><pre class="code"><code>public class Functions {
+// Relative complement of a and b: [a, c, d]</code></pre></div></div></div></div><div class="section"><div class="title">FUNCTIONS</div><div class="case"><div class="name">Parameters</div><div class="pair"><div class="card"><div class="lang">Java</div><pre class="code"><code></code></pre></div><div class="card"><div class="lang">Kotlin</div><pre class="code"><code>fun main() {
+    // Code that is executed
+    var result = parameter(20,5)
+    println("Das Ergebnis lautet: $result")
+    result = parameterWithLinebreaks(20,5)
+    println("Das Ergebnis lautet: $result")
+}
+
+// Definition of parameters: name: type
+// Parameters are separated using commas.
+fun parameter(number: Int, subtracted: Int): Int {
+    return number - subtracted
+}
+
+// Function with line breaks between parameters:
+fun parameterWithLinebreaks(
+        number: Int,
+        subtracted: Int, // trailing comma
+): Int // Type that is returned
+{
+    return number - subtracted
+    // The return keyword is used to return the difference of the val number and returned.
+
+}
+// Ausgabe:
+// Das Ergebnis lautet: 15
+// Das Ergebnis lautet: 15</code></pre></div></div></div><div class="case"><div class="name">Default arguments</div><div class="pair"><div class="card"><div class="lang">Java</div><pre class="code"><code></code></pre></div><div class="card"><div class="lang">Kotlin</div><pre class="code"><code>fun main() {
+    var result = product(number = 5) // Default argument multiplier is used.
+    println("Das Ergebnis lautet: $result")
+    result = product(5,3) // Default argument multiplier is not used.
+    println("Das Ergebnis lautet: $result")
+}
+
+// Function parameters can have default values,
+// which are used when you skip the corresponding argument:
+fun product(
+        number: Int,
+        multiplier: Int = 5, // This is a default value
+): Int
+{
+    return number * multiplier
+}
+// Ausgabe:
+// Das Ergebnis lautet: 25
+// Das Ergebnis lautet: 15</code></pre></div></div></div><div class="case"><div class="name">Named arguments</div><div class="pair"><div class="card"><div class="lang">Java</div><pre class="code"><code></code></pre></div><div class="card"><div class="lang">Kotlin</div><pre class="code"><code>fun main() {
+    // If the file of the function you wish to call is
+    // not in the same package, you must import that file.
+    // Calling the Parameters function from the Parameters.kt file:
+    var result = parameter(number = 10, subtracted = 5) // subtracted and number are named arguments
+    // You can freely change the order in which you call named arguments:
+    println("Das Ergebnis lautet: $result")
+    result = parameter(subtracted = 5, number = 10)
+    println("Das Ergebnis lautet: $result")
+}
+// Ausgabe:
+// Das Ergebnis lautet: 5
+// Das Ergebnis lautet: 5</code></pre></div></div></div><div class="case"><div class="name">Unit-returning</div><div class="pair"><div class="card"><div class="lang">Java</div><pre class="code"><code></code></pre></div><div class="card"><div class="lang">Kotlin</div><pre class="code"><code>// If a function does not return any useful value, its return type is Unit.
+// The Unit value does not have to be returned explicitly:
+fun unit(name: String?): Unit { // The Unit return type declaration is optional.
+    if (name != null) {
+        println("Hello $name")
+    } else {
+        println("Hello")
+    }
+    // return Unit or return is optional
+}</code></pre></div></div></div><div class="case"><div class="name">Local functions</div><div class="pair"><div class="card"><div class="lang">Java</div><pre class="code"><code></code></pre></div><div class="card"><div class="lang">Kotlin</div><pre class="code"><code>fun main(){
+    println(over(number = 5))
+}
+
+fun over(number: Int): String {
+    val multiplier = 5
+    // Kotlin supports local functions, which are functions inside another function:
+    fun local(multiplier: Int): Int {
+        // The local function local can use the local val number of the outer function.
+        return number * multiplier
+    }
+    return "The product of $number and $multiplier is: ${local(multiplier)}"
+}
+// Ausgabe:
+// The product of 5 and 5 is: 25</code></pre></div></div></div></div><div class="section"><div class="title">FUNCTIONS</div><div class="case"><div class="name">Functions</div><div class="pair"><div class="card"><div class="lang">Java</div><pre class="code"><code>public class Functions {
     public static void main(String[] args) {
         System.out.println(greet("Bob","Tuesday"));
         greet2("Max", "Monday");
@@ -937,7 +1016,7 @@ fun main() {
     // You can also call the function inside the println function:
     println("double1: ${double1(2,2)}\ndouble2: ${double2(2,2)}")
 
-    println(double3(zahl = 5))
+    println(double3(zahl = 5)) // The default value multiplikator = 2 is used.
 }
 
 fun double1(zahl: Int, multiplikator: Int): Int {
