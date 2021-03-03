@@ -117,6 +117,12 @@ html
 
     .section
       .title FUNCTIONS
+      .case (.name "Parameters") $ .pair
+        .card (.lang Java) $ pre.code $ code (@insert code/parameters.java)
+        .card (.lang Kotlin) $ pre.code $ code (@insert code/parameters.kt)
+
+    .section
+      .title FUNCTIONS
       .case (.name "Functions") $ .pair
         .card (.lang Java) $ pre.code $ code (@insert code/functions.java)
         .card (.lang Kotlin) $ pre.code $ code (@insert code/functions.kt)
