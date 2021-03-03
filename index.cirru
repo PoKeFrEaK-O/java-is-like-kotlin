@@ -126,6 +126,9 @@ html
       .case (.name "Named arguments") $ .pair
         .card (.lang Java) $ pre.code $ code (@insert code/named_arguments.java)
         .card (.lang Kotlin) $ pre.code $ code (@insert code/named_arguments.kt)
+      .case (.name "Unit-returning") $ .pair
+        .card (.lang Java) $ pre.code $ code (@insert code/unit_returning.java)
+        .card (.lang Kotlin) $ pre.code $ code (@insert code/unit_returning.kt)
 
     .section
       .title FUNCTIONS
