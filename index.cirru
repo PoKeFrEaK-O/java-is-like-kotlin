@@ -132,6 +132,9 @@ html
       .case (.name "Local functions") $ .pair
         .card (.lang Java) $ pre.code $ code (@insert code/local_functions.java)
         .card (.lang Kotlin) $ pre.code $ code (@insert code/local_functions.kt)
+      .case (.name "Visibility modifiers") $ .pair
+        .card (.lang Java) $ pre.code $ code (@insert code/visibility_modifiers.java)
+        .card (.lang Kotlin) $ pre.code $ code (@insert code/visibility_modifiers.kt)
 
     .section
       .title FUNCTIONS
