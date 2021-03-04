@@ -1,3 +1,7 @@
+package de.check24.learningKotlinJava.kotlin.functions
+
+import de.check24.learningKotlinJava.kotlin.test
+
 fun main() {
     val result = product(5,5)
     // The product function from the Default_arguments.kt
@@ -19,3 +23,11 @@ private fun hello() {
 
 // protected:
 // Declarations are only visible in its class and in its subclassess
+
+---------------------------------------------------------------
+
+package de.check24.learningKotlinJava.kotlin
+
+internal fun test() {
+    return println("Test")
+}
