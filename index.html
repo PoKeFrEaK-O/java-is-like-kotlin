@@ -896,7 +896,35 @@ public class Relative_complement_of_A_and_B_2 {
 // Liste B: [f, e, h, b, e]
 // ------------------
 // Relative complement of a and b: [a, c, d]
-// Relative complement of a and b: [a, c, d]</code></pre></div></div></div></div><div class="section"><div class="title">FUNCTIONS</div><div class="case"><div class="name">Parameters</div><div class="pair"><div class="card"><div class="lang">Java</div><pre class="code"><code></code></pre></div><div class="card"><div class="lang">Kotlin</div><pre class="code"><code>fun main() {
+// Relative complement of a and b: [a, c, d]</code></pre></div></div></div></div><div class="section"><div class="title">FUNCTIONS</div><div class="case"><div class="name">Parameters</div><div class="pair"><div class="card"><div class="lang">Java</div><pre class="code"><code>public class Parameters {
+    public static void main(String[] args) {
+        // Code that is executed
+        int result = parameter(20,5);
+        System.out.println("Das Ergebnis lautet: " + result);
+        result = parameterWithLinebreaks(20,5);
+        System.out.println("Das Ergebnis lautet: " + result);
+    }
+
+    // Definition of parameters: type name
+    // Parameters are separated using commas.
+    public static int parameter(int number, int subtracted) {
+        return number - subtracted;
+        // The return keyword is used to return
+        // the difference of the val number and val subtracted.
+    }
+
+    // Function with line breaks between parameters:
+    public static int parameterWithLinebreaks(
+            int number,
+            int subtracted
+    )
+    {
+        return number - subtracted;
+    }
+}
+// Ausgabe:
+// Das Ergebnis lautet: 15
+// Das Ergebnis lautet: 15</code></pre></div><div class="card"><div class="lang">Kotlin</div><pre class="code"><code>fun main() {
     // Code that is executed
     var result = parameter(20,5)
     println("Das Ergebnis lautet: $result")
@@ -908,6 +936,8 @@ public class Relative_complement_of_A_and_B_2 {
 // Parameters are separated using commas.
 fun parameter(number: Int, subtracted: Int): Int {
     return number - subtracted
+    // The return keyword is used to return
+    // the difference of the val number and val subtracted.
 }
 
 // Function with line breaks between parameters:
@@ -917,12 +947,32 @@ fun parameterWithLinebreaks(
 ): Int // Type that is returned
 {
     return number - subtracted
-    // The return keyword is used to return the difference of the val number and returned.
-
 }
 // Ausgabe:
 // Das Ergebnis lautet: 15
-// Das Ergebnis lautet: 15</code></pre></div></div></div><div class="case"><div class="name">Default arguments</div><div class="pair"><div class="card"><div class="lang">Java</div><pre class="code"><code></code></pre></div><div class="card"><div class="lang">Kotlin</div><pre class="code"><code>fun main() {
+// Das Ergebnis lautet: 15</code></pre></div></div></div><div class="case"><div class="name">Default arguments</div><div class="pair"><div class="card"><div class="lang">Java</div><pre class="code"><code>public class Default_arguments {
+    public static void main(String[] args) {
+        // Java does not support the following named inputs for methods.
+        // int result = product(number = 5, multiplier = 3);
+        int result = product(5,3);
+        // Since there is no default value,
+        // the method product uses 5 as the multiplier value instead of 3.
+
+        System.out.println("Das Ergebnis lautet: " + result);
+    }
+
+    // Java does not have default parameters.
+    public static int product(
+            int number,
+            int multiplier
+    )
+    {
+        multiplier = 5;
+        return number * multiplier;
+    }
+}
+// Ausgabe:
+// Das Ergebnis lautet: 25</code></pre></div><div class="card"><div class="lang">Kotlin</div><pre class="code"><code>fun main() {
     var result = product(number = 5) // Default argument multiplier is used.
     println("Das Ergebnis lautet: $result")
     result = product(5,3) // Default argument multiplier is not used.
@@ -940,7 +990,17 @@ fun product(
 }
 // Ausgabe:
 // Das Ergebnis lautet: 25
-// Das Ergebnis lautet: 15</code></pre></div></div></div><div class="case"><div class="name">Named arguments</div><div class="pair"><div class="card"><div class="lang">Java</div><pre class="code"><code></code></pre></div><div class="card"><div class="lang">Kotlin</div><pre class="code"><code>fun main() {
+// Das Ergebnis lautet: 15</code></pre></div></div></div><div class="case"><div class="name">Named arguments</div><div class="pair"><div class="card"><div class="lang">Java</div><pre class="code"><code>public class Named_arguments {
+    public static void main(String[] args) {
+        // Calling the Parameters method from the Parameters.java class:
+        int result = Parameters.parameter(10,5);
+        System.out.println("Das Ergebnis lautet: " + result);
+        // Java does not support named parameters
+        // for constructors or method arguments.
+    }
+}
+// Ausgabe:
+// Das Ergebnis lautet: 5</code></pre></div><div class="card"><div class="lang">Kotlin</div><pre class="code"><code>fun main() {
     // If the file of the function you wish to call is
     // not in the same package, you must import that file.
     // Calling the Parameters function from the Parameters.kt file:
@@ -975,7 +1035,63 @@ fun over(number: Int): String {
     return "The product of $number and $multiplier is: ${local(multiplier)}"
 }
 // Ausgabe:
-// The product of 5 and 5 is: 25</code></pre></div></div></div></div><div class="section"><div class="title">FUNCTIONS</div><div class="case"><div class="name">Functions</div><div class="pair"><div class="card"><div class="lang">Java</div><pre class="code"><code>public class Functions {
+// The product of 5 and 5 is: 25</code></pre></div></div></div><div class="case"><div class="name">Visibility modifiers</div><div class="pair"><div class="card"><div class="lang">Java</div><pre class="code"><code>public class Visibility_modifiers {
+    public static void main(String[] args) {
+        int result = Default_arguments.product(5,5);
+        // The product method is from the Default_arguments.java
+        // Class can be used because it is puplic.
+        // If the modifier is not specified, it is puplic.
+
+        System.out.println(result);
+        System.out.println(hello());
+    }
+
+    // The modifier private means that the method hello
+    // can only be used in the class where it was declared.
+    private static String hello() {
+        return "Hello";
+    }
+}
+// Ausgabe:
+// 25
+// Hello</code></pre></div><div class="card"><div class="lang">Kotlin</div><pre class="code"><code>package de.check24.learningKotlinJava.kotlin.functions
+
+import de.check24.learningKotlinJava.kotlin.test
+
+fun main() {
+    val result = product(5,5)
+    // The product function from the Default_arguments.kt
+    // file can be used because it is puplic.
+    // If the modifier is not specified, it is puplic.
+
+    println(result)
+    hello()
+    test()
+}
+// The modifier private means that the function hello
+// can only be used in the file where it was declared.
+private fun hello() {
+    return println("Hello")
+}
+
+// internal is an alternative to Java’s package-private.
+// internal means that the declarations are visible inside a module.
+
+// protected:
+// Declarations are only visible in its class and in its subclassess
+
+// Ausgabe:
+// 25
+// Hello
+// Test
+
+---------------------------------------------------------------
+
+package de.check24.learningKotlinJava.kotlin
+
+internal fun test() {
+    return println("Test")
+}</code></pre></div></div></div></div><div class="section"><div class="title">FUNCTIONS</div><div class="case"><div class="name">Functions</div><div class="pair"><div class="card"><div class="lang">Java</div><pre class="code"><code>public class Functions {
     public static void main(String[] args) {
         System.out.println(greet("Bob","Tuesday"));
         greet2("Max", "Monday");
