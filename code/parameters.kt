@@ -10,6 +10,8 @@ fun main() {
 // Parameters are separated using commas.
 fun parameter(number: Int, subtracted: Int): Int {
     return number - subtracted
+    // The return keyword is used to return
+    // the difference of the val number and val subtracted.
 }
 
 // Function with line breaks between parameters:
@@ -19,8 +21,6 @@ fun parameterWithLinebreaks(
 ): Int // Type that is returned
 {
     return number - subtracted
-    // The return keyword is used to return the difference of the val number and returned.
-
 }
 // Ausgabe:
 // Das Ergebnis lautet: 15
