@@ -166,6 +166,21 @@ html
     .section
       .title CLASSES
       .case (.name "Declaration") $ .pair
+        .card (.lang Java) $ pre.code $ code (@insert code/declaration_own.java)
+        .card (.lang Kotlin) $ pre.code $ code (@insert code/declaration_own.kt)
+      .case (.name "Constructors") $ .pair
+        .card (.lang Java) $ pre.code $ code (@insert code/constructors.java)
+        .card (.lang Kotlin) $ pre.code $ code (@insert code/constructors.kt)
+      .case (.name "Initialization") $ .pair
+        .card (.lang Java) $ pre.code $ code (@insert code/initialization.java)
+        .card (.lang Kotlin) $ pre.code $ code (@insert code/initialization.kt)
+      .case (.name "Default Value") $ .pair
+        .card (.lang Java) $ pre.code $ code (@insert code/default_value.java)
+        .card (.lang Kotlin) $ pre.code $ code (@insert code/default_value.kt)
+
+    .section
+      .title CLASSES
+      .case (.name "Declaration") $ .pair
         .card (.lang Java) $ pre.code $ code (@insert code/declaration.java)
         .card (.lang Kotlin) $ pre.code $ code (@insert code/declaration.kt)
       .case (.name "Usage") $ .pair
