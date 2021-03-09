@@ -1196,7 +1196,84 @@ area(width = 2, height = 3)
 // This is also possible with named arguments
 area(2, height = 2)
 area(height = 3, width = 2)
-</code></pre></div></div></div></div><div class="section"><div class="title">CLASSES</div><div class="case"><div class="name">Declaration</div><div class="pair"><div class="card"><div class="lang">Java</div><pre class="code"><code></code></pre></div><div class="card"><div class="lang">Kotlin</div><pre class="code"><code>class Shape {
+</code></pre></div></div></div></div><div class="section"><div class="title">CLASSES</div><div class="case"><div class="name">Declaration</div><div class="pair"><div class="card"><div class="lang">Java</div><pre class="code"><code></code></pre></div><div class="card"><div class="lang">Kotlin</div><pre class="code"><code>// Classes in Kotlin are declared using the keyword class:
+class Classname {
+    // Code of the class Classname
+}
+
+// If the class has no body, curly braces can be omitted:
+class Empty
+
+// Declaring a class with multiple properties:
+class Person(
+        val firstName: String,
+        val lastName: String,
+        var age: Int, // trailing comma
+) {
+    // Code of the class Person
+}</code></pre></div></div></div><div class="case"><div class="name">Constructors</div><div class="pair"><div class="card"><div class="lang">Java</div><pre class="code"><code></code></pre></div><div class="card"><div class="lang">Kotlin</div><pre class="code"><code>// A class in Kotlin can have a primary constructor and one or more secondary constructors.
+
+// The primary constructor is part of the class header,
+// it goes after the class name (and optional type parameters):
+class withconstructorKeywort constructor(firstName: String) {
+    // Code of the class Person
+}
+
+// primary constructor: constructor(firstName: String)
+
+// If the primary constructor does not have any annotations or
+// visibility modifiers, the constructor keyword can be omitted:
+class withoutconstructorKeywort (firstName: String) {
+    // Code of the class Person
+}</code></pre></div></div></div><div class="case"><div class="name">Initialization</div><div class="pair"><div class="card"><div class="lang">Java</div><pre class="code"><code></code></pre></div><div class="card"><div class="lang">Kotlin</div><pre class="code"><code>// Initialization code can be placed in initializer blocks,
+// which are prefixed with the init keyword.
+
+// During an instance initialization,
+// the initializer blocks are executed in the same order
+// as they appear in the class body, interleaved with the property initializers:
+class InitTestClass(zahl: Int) {
+    // val and var that have been declared outside
+    // of an init can be used by all following inits:
+    val someString1 = "Hello"
+
+    init {
+        println("Die Zahl lautet: $zahl")
+        // val and var, which were declared within an init,
+        // can also only be used in this init:
+        val someString2 = "World"
+        println("$someString1 $someString2")
+    }
+
+    val zahlAdded2 = zahl + 2
+    init {
+        println("Die Zahl $zahl + 2 lautet: $zahlAdded2")
+        println(someString1.toUpperCase())
+    }
+
+}
+
+fun main () {
+    // Executing the class InitTestClass:
+    InitTestClass(5)
+}
+// Ausgabe:
+// Die Zahl lautet: 5
+// Hello World
+// Die Zahl 5 + 2 lautet: 7
+// HELLO</code></pre></div></div></div><div class="case"><div class="name">Default Value</div><div class="pair"><div class="card"><div class="lang">Java</div><pre class="code"><code></code></pre></div><div class="card"><div class="lang">Kotlin</div><pre class="code"><code>// You can provide default value to constructor parameters:
+class defaultValue (name: String, age: Int = 18) {
+    init {
+        println("$name ist $age Jahre alt.")
+    }
+}
+
+fun main () {
+    defaultValue("Markus")
+    defaultValue(name = "Max", age = 22)
+}
+// Ausgabe:
+// Markus ist 18 Jahre alt.
+// Max ist 22 Jahre alt.</code></pre></div></div></div></div><div class="section"><div class="title">CLASSES</div><div class="case"><div class="name">Declaration</div><div class="pair"><div class="card"><div class="lang">Java</div><pre class="code"><code></code></pre></div><div class="card"><div class="lang">Kotlin</div><pre class="code"><code>class Shape {
     var numberOfSides = 0
     fun simpleDescription() =
         "A shape with $numberOfSides sides."
