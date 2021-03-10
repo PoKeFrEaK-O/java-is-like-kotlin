@@ -180,6 +180,9 @@ html
       .case (.name "Creating Instances of Classes") $ .pair
         .card (.lang Java) $ pre.code $ code (@insert code/creating_instances_of_classes.java)
         .card (.lang Kotlin) $ pre.code $ code (@insert code/creating_instances_of_classes.kt)
+      .case (.name "Inheritance") $ .pair
+        .card (.lang Java) $ pre.code $ code (@insert code/inheritance.java)
+        .card (.lang Kotlin) $ pre.code $ code (@insert code/inheritance.kt)
 
     .section
       .title CLASSES
