@@ -177,6 +177,9 @@ html
       .case (.name "Default Value") $ .pair
         .card (.lang Java) $ pre.code $ code (@insert code/default_value.java)
         .card (.lang Kotlin) $ pre.code $ code (@insert code/default_value.kt)
+      .case (.name "Creating Instances of Classes") $ .pair
+        .card (.lang Java) $ pre.code $ code (@insert code/creating_instances_of_classes.java)
+        .card (.lang Kotlin) $ pre.code $ code (@insert code/creating_instances_of_classes.kt)
 
     .section
       .title CLASSES
