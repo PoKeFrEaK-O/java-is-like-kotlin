@@ -186,6 +186,9 @@ html
       .case (.name "Overriding Methods") $ .pair
         .card (.lang Java) $ pre.code $ code (@insert code/overriding_methods.java)
         .card (.lang Kotlin) $ pre.code $ code (@insert code/overriding_methods.kt)
+      .case (.name "Overriding Properties") $ .pair
+        .card (.lang Java) $ pre.code $ code (@insert code/overriding_properties.java)
+        .card (.lang Kotlin) $ pre.code $ code (@insert code/overriding_properties.kt)
 
     .section
       .title CLASSES
