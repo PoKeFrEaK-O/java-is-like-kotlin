@@ -183,6 +183,9 @@ html
       .case (.name "Inheritance") $ .pair
         .card (.lang Java) $ pre.code $ code (@insert code/inheritance.java)
         .card (.lang Kotlin) $ pre.code $ code (@insert code/inheritance.kt)
+      .case (.name "Overriding Methods") $ .pair
+        .card (.lang Java) $ pre.code $ code (@insert code/overriding_methods.java)
+        .card (.lang Kotlin) $ pre.code $ code (@insert code/overriding_methods.kt)
 
     .section
       .title CLASSES
