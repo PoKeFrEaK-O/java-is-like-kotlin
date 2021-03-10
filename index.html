@@ -1273,7 +1273,87 @@ fun main () {
 }
 // Ausgabe:
 // Markus ist 18 Jahre alt.
-// Max ist 22 Jahre alt.</code></pre></div></div></div></div><div class="section"><div class="title">CLASSES</div><div class="case"><div class="name">Declaration</div><div class="pair"><div class="card"><div class="lang">Java</div><pre class="code"><code></code></pre></div><div class="card"><div class="lang">Kotlin</div><pre class="code"><code>class Shape {
+// Max ist 22 Jahre alt.</code></pre></div></div></div><div class="case"><div class="name">Creating Instances of Classes</div><div class="pair"><div class="card"><div class="lang">Java</div><pre class="code"><code></code></pre></div><div class="card"><div class="lang">Kotlin</div><pre class="code"><code>class Instances (nachname: String, vorname: String){
+    init {
+        println("Der Name der person lautet: $vorname $nachname")
+    }
+}
+
+fun main () {
+    // To create an instance of a class,
+    // call the constructor as if it were a regular function:
+    val instance1 = Instances("Mustermann","Max")
+    val instance2 = Instances("Müller","Markus")
+    instance1
+    instance2
+}
+// Ausgabe:
+// Der Name der person lautet: Max Mustermann
+// Der Name der person lautet: Markus Müller</code></pre></div></div></div><div class="case"><div class="name">Inheritance</div><div class="pair"><div class="card"><div class="lang">Java</div><pre class="code"><code></code></pre></div><div class="card"><div class="lang">Kotlin</div><pre class="code"><code>// All classes in Kotlin have a common superclass, which is Any.
+// Any has three methods: equals(), hashCode() and toString()
+
+// By default, Kotlin classes are final: they can’t be inherited.
+// To make a class inheritable, one needs to mark it with the open keyword:
+open class Inheritable {
+    val number1 = 5
+    val number2 = 5
+}
+
+// Addition inherits the val number1 and val number2 from Inheritable:
+class Addition : Inheritable() {
+    val sum = number1 + number2
+    init {
+        println("Die Summe von $number1 und $number2 lautet $sum")
+    }
+}
+
+fun main () {
+    Addition()
+}
+// Ausgabe:
+// Die Summe von 5 und 5 lautet 10</code></pre></div></div></div><div class="case"><div class="name">Overriding Methods</div><div class="pair"><div class="card"><div class="lang">Java</div><pre class="code"><code></code></pre></div><div class="card"><div class="lang">Kotlin</div><pre class="code"><code>open class First {
+    open fun number (zahl: Int): Int{
+        return zahl * 2
+    }
+}
+
+class Second() : First() {
+    init {
+        println(number(5))
+    }
+    // The override modifier overwrites the
+    // original function with the following one:
+    override fun number(zahl: Int): Int {
+        return zahl * 3
+    }
+    // To prohibit re-overriding, put the
+    // keyword final in front of the keyword override:
+    // final override fun number(zahl: Int): Int
+}
+
+fun main () {
+    print("Die Summe lautet: ")
+    Second()
+}
+// Ausgabe:
+// Die Summe lautet: 15</code></pre></div></div></div><div class="case"><div class="name">Overriding Properties</div><div class="pair"><div class="card"><div class="lang">Java</div><pre class="code"><code></code></pre></div><div class="card"><div class="lang">Kotlin</div><pre class="code"><code>open class Number1 {
+    open val firstNumber: Int = 5
+}
+
+class Number2 : Number1(){
+    // Override the val firstNumber:
+    override val firstNumber = 10
+    init {
+        println(firstNumber)
+    }
+}
+
+fun main () {
+    print("val firstNumber after override: ")
+    Number2()
+}
+// Ausgabe:
+// val firstNumber after override: 10</code></pre></div></div></div></div><div class="section"><div class="title">CLASSES</div><div class="case"><div class="name">Declaration</div><div class="pair"><div class="card"><div class="lang">Java</div><pre class="code"><code></code></pre></div><div class="card"><div class="lang">Kotlin</div><pre class="code"><code>class Shape {
     var numberOfSides = 0
     fun simpleDescription() =
         "A shape with $numberOfSides sides."
