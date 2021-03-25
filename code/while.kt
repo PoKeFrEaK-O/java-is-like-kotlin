@@ -1,12 +1,14 @@
 while ( Bedingung ) {
-    // Bedingung muss True sein, damit die Anweisung ausgeführt wird.
+    // Bedingung muss True sein,
+    // damit die Anweisung ausgeführt wird.
     Anweisung
 }
 
 do {
     Anweisung
 } while ( Bedingung )
-// Die Anweisung wird unabhängig der Bedingung immer mindestens 1-mal ausgeführt.
+// Die Anweisung wird unabhängig der
+// Bedingung immer mindestens 1-mal ausgeführt.
 
 // Example:
 var zahl: Int = 1
@@ -16,7 +18,7 @@ while (zahl <= 3){
 }
 println()
 do {
-    println("Ich werde vor der Bedingung mindestens einmal ausgeführt.")
+    println("Wird mindestens einmal ausgeführt.")
     println(zahl)
     zahl++
 } while (zahl <= 3)
