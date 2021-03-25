@@ -263,14 +263,16 @@ IntStream.rangeClosed(1, 5).forEach(
 // 4 times 5 is 20
 // 5 times 5 is 25
 </code></pre></div></div></div></div><div class="section"><div class="title">Conditions and Loops</div><div class="case"><div class="name">while-loops</div><div class="pair"><div class="card"><div class="lang">Java</div><pre class="code"><code>while ( Bedingung ) {
-    // Bedingung muss True sein, damit die Anweisung ausgeführt wird.
+    // Bedingung muss True sein,
+    // damit die Anweisung ausgeführt wird.
     Anweisung;
 }
 
 do {
     Anweisung;
 } while ( Bedingung );
-// Die Anweisung wird unabhängig der Bedingung immer mindestens 1-mal ausgeführt.
+// Die Anweisung wird unabhängig der
+// Bedingung immer mindestens 1-mal ausgeführt.
 
 // Example:
 int zahl = 1;
@@ -280,7 +282,7 @@ while (zahl <= 3) {
 }
 System.out.println();
 do {
-    System.out.println("Ich werde vor der Bedingung mindestens einmal ausgeführt.");
+    System.out.println("Wird mindestens einmal ausgeführt.");
     System.out.println(zahl);
     zahl++;
 } while (zahl <= 3);
@@ -292,14 +294,16 @@ do {
 //
 // Ich werde vor der Bedingung mindestens einmal ausgeführt.
 // 4</code></pre></div><div class="card"><div class="lang">Kotlin</div><pre class="code"><code>while ( Bedingung ) {
-    // Bedingung muss True sein, damit die Anweisung ausgeführt wird.
+    // Bedingung muss True sein,
+    // damit die Anweisung ausgeführt wird.
     Anweisung
 }
 
 do {
     Anweisung
 } while ( Bedingung )
-// Die Anweisung wird unabhängig der Bedingung immer mindestens 1-mal ausgeführt.
+// Die Anweisung wird unabhängig der
+// Bedingung immer mindestens 1-mal ausgeführt.
 
 // Example:
 var zahl: Int = 1
@@ -309,7 +313,7 @@ while (zahl <= 3){
 }
 println()
 do {
-    println("Ich werde vor der Bedingung mindestens einmal ausgeführt.")
+    println("Wird mindestens einmal ausgeführt.")
     println(zahl)
     zahl++
 } while (zahl <= 3)
@@ -1123,7 +1127,36 @@ internal fun test() {
 }
 // Ausgabe:
 // Hello Bob, today is Tuesday.
-// Hello Max, today is Monday.</code></pre></div></div></div><div class="case"><div class="name">Functions</div><div class="pair"><div class="card"><div class="lang">Java</div><pre class="code"><code></code></pre></div><div class="card"><div class="lang">Kotlin</div><pre class="code"><code>// Functions in Kotlin are declared using the fun keyword:
+// Hello Max, today is Monday.</code></pre></div></div></div><div class="case"><div class="name">Functions</div><div class="pair"><div class="card"><div class="lang">Java</div><pre class="code"><code>public class Functions {
+    public static void main(String[] args) {
+        final Integer result1 = double1(2,2);
+        final Integer result2 = double2(2,2);
+
+        System.out.println("double1: " + result1);
+        System.out.println("double2: " + result2);
+        // You can also call the function inside the println function:
+        System.out.println("double1: " + double1(2,2));
+        System.out.println("double2: "+ double2(2,2));
+    }
+
+    public static Integer double1(Integer zahl, Integer multiplier) {
+        return zahl * multiplier;
+    }
+
+    // Function with line breaks between parameters:
+    public static Integer double2(
+            Integer zahl,
+            Integer multiplier
+    )
+    {
+        return zahl * multiplier;
+    }
+}
+// Ausgabe:
+// double1: 4
+// double2: 4
+// double1: 4
+// double2: 4</code></pre></div><div class="card"><div class="lang">Kotlin</div><pre class="code"><code>// Functions in Kotlin are declared using the fun keyword:
 fun main() {
     val result1 = double1(2,2)
     val result2 = double2(2,2)
@@ -1196,7 +1229,22 @@ area(width = 2, height = 3)
 // This is also possible with named arguments
 area(2, height = 2)
 area(height = 3, width = 2)
-</code></pre></div></div></div></div><div class="section"><div class="title">CLASSES</div><div class="case"><div class="name">Declaration</div><div class="pair"><div class="card"><div class="lang">Java</div><pre class="code"><code></code></pre></div><div class="card"><div class="lang">Kotlin</div><pre class="code"><code>// Classes in Kotlin are declared using the keyword class:
+</code></pre></div></div></div></div><div class="section"><div class="title">CLASSES</div><div class="case"><div class="name">Declaration</div><div class="pair"><div class="card"><div class="lang">Java</div><pre class="code"><code>public class Declaration {
+    // Classes in Java are declared using the keyword class:
+    public class Classname {
+        // Code of the class Classname
+    }
+
+    // Curly braces cannot be omitted even if the class has no body:
+    public class Empty {}
+
+    // Declaring a class with multiple properties:
+    public class Person{
+        String firstName; // Create a class attribute
+        String lastName;
+        int age;
+    }
+}</code></pre></div><div class="card"><div class="lang">Kotlin</div><pre class="code"><code>// Classes in Kotlin are declared using the keyword class:
 class Classname {
     // Code of the class Classname
 }
@@ -1211,7 +1259,24 @@ class Person(
         var age: Int, // trailing comma
 ) {
     // Code of the class Person
-}</code></pre></div></div></div><div class="case"><div class="name">Constructors</div><div class="pair"><div class="card"><div class="lang">Java</div><pre class="code"><code></code></pre></div><div class="card"><div class="lang">Kotlin</div><pre class="code"><code>// A class in Kotlin can have a primary constructor and one or more secondary constructors.
+}</code></pre></div></div></div><div class="case"><div class="name">Constructors</div><div class="pair"><div class="card"><div class="lang">Java</div><pre class="code"><code>public class Constructors {
+    int number; // Create a class attribute
+
+    // Create a class constructor for the Constructors class:
+    public Constructors() {
+        number = 5; // Set the initial value for the class attribute number
+    }
+
+    public static void main(String[] args) {
+        // Create an object of class Constructors
+        // (This will call the constructor):
+        Constructors someObject = new Constructors();
+        // Print the value of number:
+        System.out.println("The value of number is: " + someObject.number);
+    }
+}
+// Ausgabe:
+// The value of number is: 5</code></pre></div><div class="card"><div class="lang">Kotlin</div><pre class="code"><code>// A class in Kotlin can have a primary constructor and one or more secondary constructors.
 
 // The primary constructor is part of the class header,
 // it goes after the class name (and optional type parameters):
@@ -1225,7 +1290,35 @@ class withconstructorKeywort constructor(firstName: String) {
 // visibility modifiers, the constructor keyword can be omitted:
 class withoutconstructorKeywort (firstName: String) {
     // Code of the class Person
-}</code></pre></div></div></div><div class="case"><div class="name">Initialization</div><div class="pair"><div class="card"><div class="lang">Java</div><pre class="code"><code></code></pre></div><div class="card"><div class="lang">Kotlin</div><pre class="code"><code>// Initialization code can be placed in initializer blocks,
+}</code></pre></div></div></div><div class="case"><div class="name">Initialization</div><div class="pair"><div class="card"><div class="lang">Java</div><pre class="code"><code>import java.util.Locale;
+
+public class Initialization {
+    static class InitTestClass {
+        String someString1 = "Hello";
+        int zahl = 5;
+        {
+            System.out.println("Die Zahl lautet: " + zahl);
+            String someString2 = "World";
+            System.out.println(someString1 + " " + someString2);
+        }
+
+        int zahlAdded2 = zahl + 2;
+        {
+            System.out.println("Die Zahl " + zahl + " + 2 lautet: " + zahlAdded2);
+            System.out.println(someString1.toUpperCase(Locale.ROOT));
+        }
+    }
+
+    public static void main(String[] args) {
+        InitTestClass someObject = new InitTestClass();
+        System.out.println(someObject);
+    }
+}
+// Ausgabe:
+// Die Zahl lautet: 5
+// Hello World
+// Die Zahl 5 + 2 lautet: 7
+// HELLO</code></pre></div><div class="card"><div class="lang">Kotlin</div><pre class="code"><code>// Initialization code can be placed in initializer blocks,
 // which are prefixed with the init keyword.
 
 // During an instance initialization,
